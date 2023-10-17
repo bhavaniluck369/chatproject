@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
   Route,
-  BrowserRouter as Router,
   Switch,
   Redirect
 } from "react-router-dom";
@@ -75,7 +74,6 @@ class App extends Component {
         <span className="sr-only">Loading...</span>
       </div>
     ) : (
-        <Router>
           <Switch>
             <Route exact path="/" component={Home} />
             <PrivateRoute
@@ -94,7 +92,6 @@ class App extends Component {
               component={Login}
             />
           </Switch>
-        </Router>
       );
   }
 }

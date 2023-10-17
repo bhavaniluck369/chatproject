@@ -33,8 +33,10 @@ export default class Chat extends Component {
             });
             this.setState({ chats });
             const chatArea = this.myRef.current;
+            if(chatArea){
             chatArea.scrollBy(0, chatArea.scrollHeight);
             this.setState({ loadingChats: false });
+            }
           });
     
           // Unsubscribe when the component unmounts to avoid memory leaks
